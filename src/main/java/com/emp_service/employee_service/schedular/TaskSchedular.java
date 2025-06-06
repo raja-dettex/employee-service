@@ -19,7 +19,7 @@ public class TaskSchedular {
 
     private final ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    @Scheduled(cron="* * * * * ?")
+    @Scheduled(cron="0 * * * * ?")
     public void runTask() {
         Task task = taskService.getNextReadyTask();
         if(task != null) {
